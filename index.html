@@ -6,7 +6,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>FoodFinder</title>
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="assets\style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -15,8 +18,16 @@
         <div class="hero-text">
             <h1> Food Finder</h1>
             <p>The next best site to find the next best meal.</p>
-            <button id="let's-eat">Lets Eat.</button>
+            <input type="number" id="zipcode">
+            <button  id="lets-eat" onclick="window.location.href='secondpage.html';">Lets Eat.</button>
         </div>
     </div>
+    <script>
+        $("#lets-eat").on('click', function() {
+            window.location.href = 'secondpage.html?zipcode=' + $("#zipcode").val();
+        })
+        
+    </script>
 </body>
+
 </html>
